@@ -1,0 +1,182 @@
+.player {
+    position       : fixed;
+    left           : 0;
+    right          : 0;
+    bottom         : -100%;
+    max-width      : 1228px;
+    margin         : 0 auto;
+    padding        : 24px;
+    border-radius  : 20px;
+    background     : rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    transition     : bottom .5s ease;
+}
+
+.player_active {
+    bottom: 26px;
+}
+
+.player__container {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    justify-content      : space-between;
+    align-items          : center;
+    gap                  : 20px;
+}
+
+.player__track-info {}
+
+
+.player__controller {
+    display    : flex;
+    align-items: center;
+    gap        : 15px;
+}
+
+.player__icon {
+    display            : block;
+    width              : 24px;
+    height             : 24px;
+    background-position: center;
+    background-repeat  : no-repeat;
+}
+
+.player__icon_stop {
+    background-image: url(../img/stop.svg);
+}
+
+.player__icon_prev {
+    background-image: url(../img/prev.svg);
+}
+
+.player__icon_play {
+    background-image: url(../img/play.svg);
+}
+
+.player__icon_pause {
+    background-image: url(../img/pause.svg);
+}
+
+.player__icon_next {
+    background-image: url(../img/next.svg);
+}
+
+.player__icon_like {
+    background-image: url(../img/like-o.svg);
+}
+
+.player__icon_mute {
+    background-image: url(../img/mute.svg);
+}
+
+.player__icon_muted {
+    background-image: url(../img/muted.svg);
+}
+
+
+.player__progress-wrap {
+    display      : flex;
+    align-items  : center;
+    gap          : 16px;
+    padding-right: 9px;
+}
+
+.player__progress {
+    display    : flex;
+    align-items: center;
+    flex-grow  : 1;
+    max-width  : 487px;
+}
+
+.player__progress-input {
+    width             : 100%;
+    padding           : 9px;
+    cursor            : pointer;
+    background-color  : transparent;
+    appearance        : none;
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+}
+
+.player__progress-input::-webkit-slider-runnable-track {
+    height               : 6px;
+    /* height            : 24px; */
+    background-color     : #1E5A32;
+    border               : none;
+    border-radius        : 20px;
+    -webkit-appearance   : none;
+}
+
+.player__progress-input::-webkit-slider-thumb {
+    width             : 12px;
+    height            : 24px;
+    margin-top        : -9px;
+    background-color  : #FFFFFF;
+    box-shadow        : 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius     : 30px;
+    -webkit-appearance: none;
+}
+
+.player__progress-input:hover::-webkit-slider-runnable-track,
+.player__progress-input:active::-webkit-slider-runnable-track {
+    background-color: #10692e;
+}
+
+.player__progress-input:hover::-webkit-slider-thumb,
+.player__progress-input:active::-webkit-slider-thumb {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.player__time {
+    font-size: 14px;
+    display  : flex;
+    gap      : 4px;
+}
+
+.player__time-passed {}
+
+.player__time-total {}
+
+
+.player__volume-wrap {
+    display    : flex;
+    align-items: center;
+    gap        : 10px;
+}
+
+.player__volume {
+    width     : 146px;
+    height    : 24px;
+    background: url(../img/volume.svg) center/contain no-repeat;
+
+}
+
+.player__volume-input {
+    width             : 100%;
+    height            : 100%;
+    background-color  : transparent;
+    cursor            : pointer;
+    appearance        : none;
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+}
+
+.player__volume-input::-webkit-slider-runnable-track {}
+
+.player__volume-input:hover::-webkit-slider-runnable-track,
+.player__volume-input:active::-webkit-slider-runnable-track {}
+
+.player__volume-input::-webkit-slider-thumb {
+    width             : 12px;
+    height            : 24px;
+    background-color  : #FFFFFF;
+    box-shadow        : 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius     : 30px;
+    -webkit-appearance: none;
+}
+
+.player__volume-input:hover::-webkit-slider-thumb,
+.player__volume-input:active::-webkit-slider-thumb {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
