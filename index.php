@@ -39,8 +39,8 @@
             </form>
 
             <button class="header__favorite-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" fill="white" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" />
                 </svg>
             </button>
         </div>
@@ -118,9 +118,9 @@
             ];
             ?>
 
-            <?php foreach ($catalog as $item) : ?>
+            <?php foreach ($catalog as $key => $item) : ?>
 
-                <button class="track catalog__item">
+                <button class="track <?php echo $key===1 ? 'track_active' : ''; ?> catalog__item">
                     <div class="track__img-wrap">
                         <img class="track__poster" src="img/<?php echo $item['img']; ?>.jpg" alt="<?php echo "{$item['artist']} - {$item['track']}"; ?>">
                     </div>
@@ -133,6 +133,13 @@
 
             <?php endforeach; ?>
 
+            <button class="catalog__btn-add">
+                <span>Увидеть все</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z" />
+                </svg>
+
+            </button>
 
         </div>
     </section>
@@ -163,7 +170,7 @@
                 </div>
                 <p class="player__time">
                     <span class="player__time-passed">0:24</span>
-                    <span> / </span>
+                    <span>/</span>
                     <span class="player__time-total">4:31</span>
                 </p>
             </div>
